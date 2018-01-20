@@ -20,12 +20,16 @@ html_str = """
 </head>
 <body>
 
-<a href="http://angel-tools.ddns.net:8080/">nodeServer</a>
+<div>
+    <a href="http://angel-tools.ddns.net:8080/">nodeServer</a>
+</div>
 """
 
 for fileName in fileNames:
     if os.path.isdir('./' + fileName) and fileName not in exeptions:
-        html_str += '<a href="http://angel-tools.ddns.net/' + fileName + '">' + fileName + '</a>'
+        html_str += '<div>\n'
+        html_str += '    <a href="http://angel-tools.ddns.net/' + fileName + '">' + fileName + '</a>\n'
+        html_str += '</div>\n'
 
 html_str += "</body></html>"
 
